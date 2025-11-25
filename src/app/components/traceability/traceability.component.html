@@ -1,0 +1,73 @@
+<div>
+
+    <img src="assets/img/Trazabilidad/ImagenArriba.jpg" draggable="false" style="width: 100%;" alt="">
+
+
+    <div class="custom-container overflow mt4 mb4">
+        <span class="g-title mb1 text-center">¿QUÉ ES TRAZABILIDAD?</span>
+
+        <span class="g-text text-center mb2">La trazabilidad consiste en saber de dónde proceden los productos y cómo se fabrican. Esta confianza significa que puedes elegir productos puros, seguros y efectivos con seguridad.</span>
+        
+        <span class="g-text text-center mb4">La trazabilidad de Glister™ da pruebas de cómo se fabrican nuestros productos.</span>
+        
+        <div class="row mb1">
+            <div class="col-sm-12 col-md-6 col-lg-4" >
+                <img src="assets/img/Trazabilidad/CIENCIA.jpg" style="width: 100%;" draggable="false" alt="">
+                <span class="g-subtitle text-center pt2 pb2" style="color: #a7d18c;">CIENCIA</span>
+                <span class="g-text" style="text-align: justify;">Nuestros científicos del cuidado bucal aprovecharon el poder de más de 85 años de ciencia vegetal Nutrilite™ para encontrar el botánico adecuado que brinde un sabor fresco y que inspire a las familias a utilizar los productos para su higiene bucal.</span>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4" >
+                <img src="assets/img/Trazabilidad/IngredientesBotanicos.jpg" style="width: 100%;" draggable="false" alt="">
+                <span class="g-subtitle text-center pt2 pb2" style="color: #a7d18c;">INGREDIENTES BOTÁNICOS</span>
+                <span class="g-text" style="text-align: justify;">Para crear una experiencia de cuidado bucal nuestros científicos eligieron las bondades de la menta certificada por Nutrilite™ totalmente trazable.</span>
+                <span class="g-text" style="text-align: justify;">La variedad de menta piperita es cultivada bajo los métodos de agricultura ecológica para cuidar su pureza.</span>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4" >
+                <img src="assets/img/Trazabilidad/CREACIONDEPRODUCTOS.jpg" style="width: 100%;" draggable="false" alt="">
+                <span class="g-subtitle text-center pt2 pb2" style="color: #a7d18c;">CREACIÓN DE PRODUCTOS</span>
+                <span class="g-text" style="text-align: justify;">Desde las pruebas de los ingredientes hasta el producto terminado, los productos de Glister™ se someten a más de 250 pruebas para garantizar su seguridad y eficacia.</span>
+            </div>
+        </div>
+
+
+        <span class="g-title mb1 pt4 text-center">NUESTRO PROCESO</span>
+
+        <span class="g-text text-center mb4">¿Te has preguntado alguna vez cómo garantizamos la calidad y la transparencia en nuestros productos desde el origen hasta tus manos? ¡Ahora es tu oportunidad de descubrirlo! <br><br> Observa nuestro emocionante recorrido detrás de cámaras para conocer un poco más sobre nuestro exhaustivo proceso de trazabilidad.</span>
+        
+        <div class="row">
+            <div *ngFor="let item of process" class="col-sm-12 col-md-6 col-lg-4 mb2">
+                <div class="card">
+                    <div style="position: relative; width: 100%; height: 100%;" >
+                        <img [src]="item.img" style="width: 100%;" draggable="false" alt="">
+                        <div (click)="openModal(item.video)" class="play-btn" >
+                            <span class="gg-play-button"></span>
+                        </div>
+                    </div>
+                    <div class="card-content text-center">
+                        <span class="g-text g-bold"><b>{{ item.title }}</b></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/img/Mentas PNG/Menta-06.png" class="mint" style="top: 10%; left: -4%; transform: rotate(45deg);" draggable="false" alt="">
+        <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 20%; right: -2%; transform: rotate(115deg);" draggable="false" alt="">
+        <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 50%; left: -4%; transform: rotate(170deg);" draggable="false" alt="">
+    </div>
+</div>
+
+
+<div id="video-detail" class="modal" tabindex="-1" (click)="closeModal()">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background-color: transparent !important; border: none;">
+            <div class="modal-header" style="padding: 0; border: none;">
+                <div class="text-end" style="width: 100%;">
+                    <img src="assets/img/BotonTacha.png" (click)="closeModal()" style="width: 50px;" alt="">
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 0 2rem;">
+                <video autoplay loop controls [src]="videoSelected" class="g-video" ></video>
+            </div>
+        </div>
+    </div>
+</div>

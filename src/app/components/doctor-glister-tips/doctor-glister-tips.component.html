@@ -1,0 +1,62 @@
+<div>
+
+    <img src="assets/img/RecomendadorDrGlister/ImagenArriba.jpg" style="width: 100%;" draggable="false" alt="">
+
+    <div class="custom-container overflow mb4 custom-center" style="flex-direction: column;">
+        <img src="assets/img/RecomendadorDrGlister/DrGlisterColor.png" class="g-title-img mb2 mt2" draggable="false"
+            alt="">
+
+        <span class="g-title mb2 text-center">Basado en tus respuestas, compartimos algunas recomendaciones para mejorar
+            tu rutina de cuidado bucal:</span>
+        <div style="display: flex; flex-wrap: wrap;">
+
+            <div class="tip-section" [innerHTML]=tipmatch></div>
+
+            <div class="swiper-containerDr">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide custom-center text-center" style="padding-bottom: 4rem;" *ngFor="let img of tipmatchImg">
+                            
+                            <img [src]="img" style="width: 100%;" class="mb2" draggable="false" alt="">
+
+                            <button (click)="navigateTo(['/buy', 1])" class="g-btn">COMPRAR</button>
+                        </div>
+                        
+                        <!--div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div-->
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <span class="g-title pt2 mb2 text-center">Conoce el sistema completo de cuidado Bucal Glister™:</span>
+
+        <div class="row mb4">
+            <div *ngFor="let product of products" class="col-sm-12 col-md-3 text-center">
+                <div class="card-products">
+                    <img [src]="product.img" class="mb2" draggable="false" alt="">
+
+                    <span (click)="navigateTo(['oral-system-step', product.id - 1])" class="g-text-small mb1"
+                        style="color: #222; text-decoration: underline; cursor: pointer;"><b>{{ product.name
+                            }}</b></span>
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngFor="let question of doctorGlisterService.questions">
+            {{ question.answer }}
+          </div> -->
+        <span class="g-text-small text-center">*Esta no es una pasta dental blanqueadora. El blanqueamiento dental puede
+            suceder tras ejercer una rutina diaria de cepillado según lo recomendado. Por la legislación regulatoria el
+            sello Plant-Based Goodness™ en chile no aplica.</span>
+
+        <img src="assets/img/Mentas PNG/Menta-04.png" class="mint" style="top: 10%; left: -4%; transform: rotate(-80deg);" draggable="false" alt="">
+        <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 60%; right: -4%; transform: rotate(-55deg);" draggable="false" alt="">
+    </div>
+
+    <!-- <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" *ngFor="let img of tipmatchImg">
+        <img src="{{ img }}" style="width: 100%;" draggable="false" alt="">
+      </div>
+    </div> -->
+</div>

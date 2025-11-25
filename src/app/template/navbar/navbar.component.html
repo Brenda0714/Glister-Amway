@@ -1,0 +1,42 @@
+<div class="custom-center">
+    <div style="width: 100%;">
+        <div class="custom-navbar">
+            <div class="navbar-item">
+                <a [routerLink]="['/oral-system']" class="custom-center" style="width: 100%;">
+                    <img src="assets/img/logo.png" class="logo" draggable="false" alt="">
+                </a>
+            </div>
+            <div class="navbar-item" (mouseleave)="closeSubMenu()">
+                <button class="g-text-small mb0 dropdown-toggle" (click)="closeSubMenu()" [routerLink]="['/oral-system-game']" routerLinkActive="active-route" id="oralSystemMenu" (mouseenter)="openSubMenu()" 
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    SISTEMA BUCAL
+                </button>
+                <div class="dropdown-menu" id="oralSystemDropdown" aria-labelledby="oralSystemMenu">
+                    <a (click)="closeSubMenu()" [routerLink]="['/oral-system-step', 0]" routerLinkActive="active-route" class="dropdown-item" href="javascript:void(0)"><b class="g-text-small">PASO 1: CEPILLAR</b></a>
+                    <a (click)="closeSubMenu()" [routerLink]="['/oral-system-step', 1]" routerLinkActive="active-route" class="dropdown-item" href="javascript:void(0)"><b class="g-text-small">PASO 2: USAR HILO DENTAL</b></a>
+                    <a (click)="closeSubMenu()" [routerLink]="['/oral-system-step', 2]" routerLinkActive="active-route" class="dropdown-item" href="javascript:void(0)"><b class="g-text-small">PASO 3: ENJUAGAR</b></a>
+                    <a (click)="closeSubMenu()" [routerLink]="['/oral-system-step', 3]" routerLinkActive="active-route" class="dropdown-item" href="javascript:void(0)"><b class="g-text-small">REFRESCAR</b></a>
+                </div>
+            </div>
+            <div class="navbar-item">
+                <button class="g-text-small mb0" [routerLink]="['/doctor-glister']" routerLinkActive="active-route" type="button">DR. GLISTER</button>
+            </div>
+            <div class="navbar-item">
+                <button class="g-text-small mb0" [routerLink]="['/traceability']" routerLinkActive="active-route" type="button">TRAZABILIDAD</button>
+            </div>
+   <!--          <div class="navbar-item">
+                <button class="g-text-small mb0" [routerLink]="['/learn']" routerLinkActive="active-route" type="button">APRENDE</button>
+            </div> -->
+            <div class="navbar-item">
+                <button class="g-text-small mb0" [routerLink]="['/buy', 1]" routerLinkActive="active-route" type="button" >
+                    <span class="buy-btn" style="padding: .8rem 2.5rem;">COMPRAR</span>
+                </button>
+            </div>
+            <button type="button" (click)="toggle()" class="toggle-btn" >
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div id="dragzone" class="custom-container overflow" style="position: relative; width: 100%;">
+
+    <span class="g-title text-center mb2 mt2">SISTEMA BUCAL RUTINA</span>
+
+    <!--img src="assets/img/SistemaBucal/PastaParaJuego.png" class="tooth-paste" id="dragable" alt="">
+
+    <div id="dragable2" class="tooth-brush-content">
+        <img src="assets/img/SistemaBucal/CepilloParaJuego.png" [ngClass]="{ 'active': !hasToothPaste }" class="tooth-brush" alt="">
+        <img src="assets/img/SistemaBucal/CepilloParaJuego2.png" [ngClass]="{ 'active': hasToothPaste }" class="tooth-brush" alt="">
+    </div-->
+
+    <video id="animation" autoplay src="assets/img/SistemaBucal/AnimacionPastaCepillo.mp4" style="width: 100%;"></video>
+
+    <img src="assets/img/Mentas PNG/Menta-04.png" class="mint" style="top: 10%; left: -4%; transform: rotate(-85deg);" draggable="false" alt="">
+    <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 80%; right: -4%; transform: rotate(-50deg);" draggable="false" alt="">
+</div>
+
+<!--div class="custom-container mb4 mt1" style="display: flex; justify-content: center;">
+    <button (click)="navigateTo(['oral-system-step', 0])" class="g-btn">
+        <span class="g-text-small">SALTAR RUTINA</span>
+    </button>
+
+    <button *ngIf="hasToothPaste" (click)="reloadElements()" class="g-btn">
+        <span class="g-text-small">REINICIAR</span>
+    </button>
+
+    <button *ngIf="hasToothPaste" (click)="navigateTo(['oral-system-step', 0])" class="g-btn">
+        <span class="g-text-small">CONTINUAR</span>
+    </button>
+</div-->

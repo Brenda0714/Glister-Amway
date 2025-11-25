@@ -1,0 +1,33 @@
+
+    <div class="custom-sidebar pt4" [ngClass]="{ 'open': isSidebarOpen }">
+        <div class="sidebar-item mb2">
+            <img src="assets/img/logo.png" (click)="closeSubmenu(); close()" [routerLink]="['/oral-system']" class="logo" draggable="false" alt="">
+        </div>
+        <div class="sidebar-item">
+            <button (click)="toggle()" class="g-text mb0" type="button">SISTEMA BUCAL</button>
+        </div>
+        <div class="sidebar-subitems" [ngClass]="{ 'open': isOpenSubMenu }">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/oral-system-game']" routerLinkActive="active-subroute" type="button">SISTEMA BUCAL</button>
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/oral-system-step', 0]" routerLinkActive="active-subroute" type="button">PASO 1: CEPILLAR</button>
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/oral-system-step', 1]" routerLinkActive="active-subroute" type="button">PASO 2: USAR HILO DENTAL</button>
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/oral-system-step', 2]" routerLinkActive="active-subroute" type="button">PASE 3: ENJUAGAR</button>
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/oral-system-step', 3]" routerLinkActive="active-subroute" type="button">REFRESCAR</button>
+        </div>
+        <div class="sidebar-item">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/doctor-glister']" routerLinkActive="active-route" type="button">DR. GLISTER</button>
+        </div>
+        <div class="sidebar-item">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/traceability']" routerLinkActive="active-route" type="button">TRAZABILIDAD</button>
+        </div>
+       <!--  <div class="sidebar-item">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/learn']" routerLinkActive="active-route" type="button">APRENDE</button>
+        </div> -->
+        <div class="sidebar-item">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" [routerLink]="['/buy', 1]" routerLinkActive="active-route" type="button">COMPRAR</button>
+        </div>
+        <div class="sidebar-item">
+            <button (click)="closeSubmenu(); close()" class="g-text mb0" style="display: flex; justify-content: center; align-items: center;" type="button">
+                <div class="close"></div>
+            </button>
+        </div>
+    </div>

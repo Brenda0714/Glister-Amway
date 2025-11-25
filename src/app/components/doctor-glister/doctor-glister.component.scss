@@ -1,0 +1,238 @@
+
+
+.custom-card {
+    border-radius: 25px;
+    background-color: #fff;
+    width: 30%;
+    overflow: hidden;
+
+    .card-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: .8rem;
+
+        
+        img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover;
+        }
+
+        .steps {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: .5rem;
+            margin-bottom: .5rem;
+
+            .step {
+                display: inline-block;
+                height: 5px;
+                width: 20px;
+                background-color: rgb(173, 206, 255);
+            }
+
+            .step.active {
+                background-color: rgb(81, 149, 252);
+            }
+        }
+    }
+
+    .card-body {
+        padding: .5rem 0;
+        text-align: center;
+
+        img {
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover;
+        }
+
+        .answers {
+            display: flex;
+            gap: 0 2rem;
+            padding: .5rem 0;
+            justify-content: center;
+
+            .answer-btn {
+                border-radius: 50%;
+                background-color: #53565a;
+                color: #53565a;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border: none;
+                outline: none;
+            }
+
+            .answer-btn.active {
+                background-color: rgb(81, 149, 252);
+            }
+        }
+    }
+
+    .card-footer {
+        
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        text-decoration: underline;
+ 
+       .step-btnReady{
+        
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .step-btnReady:hover{
+            text-decoration: underline;
+        }
+        .step-btn {
+      
+
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        
+        .step-btn:hover {
+            text-decoration: underline;
+       
+        }
+    }
+    .card-footerReady {
+        
+        display: flex;
+        justify-content: center;
+        padding: 1rem 2rem;
+        text-decoration: underline;
+       
+
+    .step-btnReady{
+   
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        .step-btnReady:hover{
+            text-decoration: underline;
+        }
+   
+        
+        .step-btn {
+      
+
+            background-color: transparent;
+            border: none;
+            outline: none;
+        }
+        
+        .step-btn:hover {
+            text-decoration: underline;
+       
+        }
+    }
+}
+
+.g-title-img {
+    width: 20%;
+}
+
+.back-img {
+    width: 100%; 
+    height: 100%;
+    flex-direction: column; 
+    justify-content: flex-start; 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center;
+}
+
+
+// Extra small devices (smartphones, 374px and down)
+@media (min-width: 300px) and (max-width: 374px) { 
+    .g-title-img {
+        width: 50%;
+    }
+    .custom-card {
+        width: 85%;
+    }
+}
+
+// Small devices (smartphones, 576px and down)
+@media (min-width: 375px) and (max-width: 576px) { 
+    .g-title-img {
+        width: 50%;
+    }
+    .custom-card {
+        width: 85%;
+    }
+}
+
+// Medium devices (tablets, 768px and down)
+@media (min-width: 577px) and (max-width: 768px) {
+    .g-title-img {
+        width: 40%;
+    }
+    .custom-card {
+        width: 50%;
+    }
+}
+
+// Large devices (desktops, 992px and dpwn)
+@media (min-width: 769px) and (max-width: 1024px) { 
+    .custom-card {
+        width: 35%;
+    }
+}
+
+// X-Large devices (large desktops, 1399px and down)
+@media (min-width: 1025px) and (max-width: 1279px) {
+   
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1280px) and (max-width: 1500px) { 
+    .custom-card {
+        width: 30%;
+    }
+}
+
+
+
+
+@media (min-width: 1500px) and (max-width: 1920px) {
+    .custom-card {
+        .card-header {
+            img {
+                height: 300px;
+            }
+        }
+        .card-body {
+            img {
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1921px) {
+    .custom-card {
+        .card-header {
+            img {
+                height: 350px;
+            }
+        }
+        .card-body {
+            img {
+                height: 300px;
+            }
+        }
+    }
+}
+
+
+

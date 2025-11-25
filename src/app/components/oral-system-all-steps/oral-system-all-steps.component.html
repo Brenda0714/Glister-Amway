@@ -1,0 +1,19 @@
+<div class="custom-container overflow mb4 mt4">
+
+    <span class="g-title text-center mb4">Conoce el sistema de cuidado bucal Glister™ para una sonrisa radiante</span>
+
+    <div class="row mb4">
+        <div *ngFor="let step of steps" class="col-sm-12 col-md-6 col-lg-3 mb2">
+            <div>
+                <img [src]="step.img" draggable="false" style="width: 100%;" alt="">
+
+                <span class="g-text text-center" style="padding: 1rem; background-color: #f3f3f3; font-weight: 600;">{{ step.step }}</span>
+            </div>
+        </div>
+    </div>
+
+    <span class="g-text-small text-center  ">*Por la legislación regulatoria el sello Plant- Based Goodness™ en Chile no aplica.</span>
+
+    <img src="assets/img/Mentas PNG/Menta-04.png" class="mint" style="top: 0%; left: -2%;" draggable="false" alt="">
+    <img src="assets/img/Mentas PNG/Menta-01.png" class="mint" style="top: 85%; right: -4%; transform: rotate(110deg);" draggable="false" alt="">
+</div>

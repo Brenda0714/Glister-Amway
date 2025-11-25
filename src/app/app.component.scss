@@ -1,0 +1,34 @@
+.go-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.go-to-top-image {
+  width: 40px;
+  height: auto;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .go-to-top-container {
+      bottom: 10px;
+      right: 10px;
+  }
+
+  .go-to-top-image {
+      width: 40px;
+  }
+}
+.glowing {
+  animation: glowingAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes glowingAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}

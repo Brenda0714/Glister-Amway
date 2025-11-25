@@ -1,0 +1,236 @@
+<div class="swiper" >
+    <div class="swiper-wrapper">
+        <div class="swiper-slide" >
+            <img src="assets/img/SistemaBucal/Banner-3.png" style="width: 100%;" draggable="false" alt="">
+        </div>
+        <div class="swiper-slide" style="position: relative;" >
+            <img src="assets/img/SistemaBucal/Banner-2.png" style="width: 100%;" draggable="false" alt="">
+
+            <button (click)="navigateTo(['/doctor-glister'])" class="g-btn xs-btn" >
+                <span class="g-text-small">IR AL RECOMENDADOR</span>
+            </button>
+        </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  
+    <!--div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div-->
+</div>
+<div class="mb1">
+
+    <div class="custom-container overflow" >
+        <span class="g-title mb4 pt4 text-center" >LEGADO GLISTER™</span>
+
+        <div class="row mb1">
+            <div class="col-sm-12 col-md-12 col-lg-6 custom-center" style="position: relative;" >
+                <img src="assets/img/SistemaBucal/Video-01.jpg" class="g-img shadow mb2" draggable="false" alt="">
+                <div (click)="openModal('assets/img/SistemaBucal/LegadoGlister.mp4')" class="play-btn">
+                    <span class="gg-play-button"></span>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <span class="g-text mb2">El sistema de cuidado bucal Glister™ es tu solución holística basada en tres pilares fundamentales que están en el centro de todo lo que hacemos:</span>
+                <ul class="g-text" style="list-style: decimal;">
+                    <li class="mb1">Un legado de confianza desde la década de 1960.</li>
+                    <li class="mb1">La higiene bucal total comienza con la ciencia.</li>
+                    <li class="mb1">Diseño de fórmulas con filosofía Plant-Based Goodness™.</li>
+                </ul>
+            </div>
+        </div>
+
+        <img src="assets/img/Mentas PNG/Menta-04.png" class="mint" style="top: 50%; left: -2%;" draggable="false" alt="">
+        <img src="assets/img/Mentas PNG/Menta-06.png" class="mint" style="top: 10%; right: -2%;" draggable="false" alt="">
+    </div>
+
+    <div class="custom-container overflow" >
+        <span class="g-title mb2 pt4 text-center">SISTEMA DE CUIDADO BUCAL</span>
+        <span class="g-text mb4 text-center">Diseñado científicamente y respaldado clínicamente.</span>
+    
+        <div class="row mb4">
+            <div class="col-sm-12 col-md-12 col-lg-6">
+                <span class="g-subtitle mb2">¡Cepillar, usar hilo dental, enjuagar!</span>
+                <span class="g-text mb2">El Sistema de cuidado bucal Glister™ está diseñado para ayudarte a tener dientes más limpios, encías sanas y aliento fresco al mismo tiempo que apoya el equilibrio de tu microbioma oral, con fórmulas más limpias e ingredientes naturales y trazables.</span>
+                <span class="g-text mb4">No olvides que cuando tienes confianza en tu sonrisa, no hay nada que pueda detenerte.</span>
+    
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-6 custom-center" style="position: relative;">
+                <img src="assets/img/SistemaBucal/Video-02.jpg" class="g-img shadow mb2" draggable="false" alt="">
+                <div (click)="openModal('assets/img/SistemaBucal/SistemaDeHigiene.mp4')" class="play-btn">
+                    <span class="gg-play-button"></span>
+                </div>
+            </div>
+        </div>
+        <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 40%; left: -4%;" draggable="false" alt="">
+    </div>
+
+
+    <div class="custom-container overflow" >
+        <span class="g-title mb1  text-center"  >SOLUCIÓN HOLÍSTICA PARA LA HIGIENE BUCAL</span>
+    
+        <div class="row  pt4">
+            <div *ngFor="let video of videos" class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb2 custom-center">
+                <div class="flip-card" [ngClass]="{ 'rotate': video.rotate }" [style]="{ 'height': flipCardHeigth + 'px' }">
+                    <div class="flip-card-inner" >
+                        <div (click)="rotateCard(video.id)" class="flip-card-front">
+                            <video [id]="'video_' + video.id" (mouseenter)="play(video.id)" (mouseleave)="stop(video.id)" muted loop class="g-video" >
+                                <source [src]="video.video" type="video/mp4">
+                            </video>
+                        </div>
+                        <div (click)="rotateCard(video.id)" class="flip-card-back">
+                            <div class="card-back">
+                                <img [src]="video.img" draggable="false" [ngClass]="{ 'border-radius': video.rounded }" alt="">
+                                
+                                <span class="g-text-small mb1 mt1" style="color: #222;">{{ video.description }}</span>
+                                
+                                <button (click)="navigateTo(video.route)" class="g-btn">
+                                    <span class="g-text-small" >CONOCE MÁS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="g-text-small text-center pb4">*Da clic para visualizar los pasos a seguir.*</span>
+        
+        <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 40%; right: -5%; transform: rotate(-50deg);" draggable="false" alt="">
+    </div>
+</div>
+
+<div class="mb1 pt1" style="background-image: url('assets/img/SistemaBucal/FondoRecomendador.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center">
+    
+    <div class="custom-container overflow" >
+        <span class="g-title mb4 text-center">¡DESCUBRIR TU RUTINA DE IDEAL ES MÁS FÁCIL!</span>
+        
+        <div class="row pt1"  >
+            <div class="col-sm-0 col-md-2 col-lg-4"></div>
+            <div class="col-sm-12 col-md-10 col-lg-8">
+                <span class="g-text mb1">¿Quieres saber cuál es tu rutina de cuidado bucal ideal para obtener una sonrisa radiante?</span>
+                <span class="g-text mb4"><b>Responde las preguntas</b> de nuestro Dr. Glister y cuéntanos cómo cuidas tu sonrisa y te diremos que productos necesitas.</span>
+
+                <div class="custom-center mb4">
+                    <button (click)="navigateTo(['/doctor-glister'])" class="g-text g-btn">IR AL RECOMENDADOR</button>
+                </div>
+
+                <span class="g-text-small pb4 text-center">*Estas recomendaciones son generales y no sustituyen una visita con un especialista en cuidado bucal, es importante consultar a un dentista para obtener una evaluación personalizada.</span>
+
+            </div>
+        </div>
+
+        
+        <img src="assets/img/Mentas PNG/Menta-04.png" class="mint" style="top: 0%; right: -2%; transform: rotate(100deg);" draggable="false" alt="">
+    </div>
+</div>
+
+
+<div>
+    <img src="assets/img/SistemaBucal/Granja-de-menta.jpg" draggable="false" style="width: 100%;" alt="">
+
+    <div class="custom-container overflow ">
+        <span class="g-title mb1 pt4 text-center">TRAZABILIDAD Y SUSTENTABILIDAD</span>
+
+        <div class="row mb4 pt1
+        ">
+            <div class="col-sm-12 col-md-12 col-lg-5 custom-center mb2">
+                <div class="card">
+                    <div style="position: relative; width: 100%; height: 100%;" >
+                        <img src="assets/img/SistemaBucal/VideoEnVivo.jpg" style="width: 100%;" draggable="false" alt="">
+                        
+                
+                    </div>
+                    <div class="card-content text-center">
+                 
+                        <span class="g-text g-bold mb2"><b>TROUT LAKE WEST WASHINGTON, EE. UU.</b></span>
+                        <span class="g-text-small" style="color: #212529;">Ubicada en una de las principales regiones productoras de menta piperita de alta calidad del mundo.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-12 col-lg-7">
+                <span class="g-text mb2">La trazabilidad y sustentabilidad de Glister™ es la prueba de que nuestros productos son fabricados de manera responsable, son seguros y efectivos.</span>
+                <span class="g-text mb2">Si quieres tener la tranquilidad de que los productos de higiene oral que utilizas te ayudan a vivir de manera responsable, necesitas más que una descripción como "pasta de dientes natural" o "enjuague bucal con ingredientes botánicos".</span>
+                <span class="g-text mb2">Necesitas pruebas de que los productos cumplen con tus expectativas de cuidado oral seguro, eficaz y de origen responsable con el medio ambiente.</span>
+                <span class="g-text mb2">La trazabilidad y sustentabilidad significa que los detalles importantes son transparentes.</span>
+                
+                <div class="text-center">
+                    <button (click)="navigateTo(['/traceability'])" class="g-btn" >
+                        <span class="g-text">CONOCE MÁS</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <img src="assets/img/Mentas PNG/Menta-06.png" class="mint" style="top: 60%; right: -2%;" draggable="false" alt="">
+    </div>
+</div>
+    
+
+<div class="custom-container overflow mb1" style="position: relative;">
+
+    <span class="g-title mb2 pt1 text-center">FILOSOFÍA PLANT-BASED GOODNESS™</span>
+
+    <div class="row mb4 pt1">
+        <div class="col-sm-12 col-md-12 col-lg-6 mb2">
+            <span class="g-text mb4">Las nuevas fórmulas de Glister™ creadas bajo la filosofía Plant-Based Goodness™ significa que:</span>
+            
+            <span class="g-text mb1" style="display: flex; align-items: flex-start; gap: 1rem;">
+                <img src="assets/img/SistemaBucal/4.jpg" style="width: 40px" draggable="false" alt="">
+                Son de origen natural y vegetal.
+            </span>
+            <span class="g-text mb1" style="display: flex; align-items: flex-start; gap: 1rem;">
+                <img src="assets/img/SistemaBucal/4.jpg" style="width: 40px" draggable="false" alt="">
+                Son libres de parabenos e ingredientes derivados de animales.
+            </span>
+            <span class="g-text mb1" style="display: flex; align-items: flex-start; gap: 1rem;">
+                <img src="assets/img/SistemaBucal/4.jpg" style="width: 40px" draggable="false" alt="">
+                Contienen ingredientes derivados de plantas cultivadas en granjas certificadas por Nutrilite™
+            </span>
+
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6 custom-center" >
+            <img src="assets/img/SistemaBucal/Filosofia_Plantbased_Goodness.jpg" class="g-img mb2" draggable="false" alt="">
+        </div>
+    </div>
+
+    <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 50%; left: -5%; transform: rotate(180deg);" draggable="false" alt="">
+    
+</div>
+
+<div class="custom-container overflow" >
+    <span class="g-title mb2 pt1 text-center">DIENTES LIMPIOS, ENCÍAS SANAS Y ALIENTO FRESCO</span>
+    
+    <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 row-cols-lg-5 mb4">
+        <div *ngFor="let product of products; index as i" class="col text-center">
+            <div class="card-products">
+                <div class="img">
+                    <img [src]="product.img" class="mb2" [ngClass]="{ 'delay': (i % 2 == 0) }" draggable="false" alt="">
+                </div>
+                <span class="g-text mb1"><b>{{ product.name }}</b></span>
+                <span class="g-text-small mb2" style="color: #222; text-align: justify;">{{ product.description }}</span>
+    
+                <button (click)="navigateTo(['/buy', product.buy])" class="g-btn" >
+                    <span class="g-text-small">COMPRAR</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+    <img src="assets/img/Mentas PNG/Menta-03.png" class="mint" style="top: 0%; right: -5%; transform: rotate(-50deg);" draggable="false" alt="">
+</div>
+
+
+
+<div id="video-detail" class="modal" tabindex="-1" (click)="closeModal()">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background-color: transparent !important; border: none;">
+            <div class="modal-header" style="padding: 0; border: none;">
+                <div class="text-end" style="width: 100%;">
+                    <img src="assets/img/BotonTacha.png" (click)="closeModal()" style="width: 50px;" alt="">
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 0 2rem">
+                <video autoplay loop controls [src]="videoSelected" class="g-video" ></video>
+            </div>
+        </div>
+    </div>
+</div>

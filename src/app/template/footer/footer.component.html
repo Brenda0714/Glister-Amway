@@ -1,0 +1,32 @@
+
+  <footer class="custom-footer">
+    <div class="row pt2 pb1">
+        <div id="logo" class="col-sm-12 col-md-3 text-center">
+            <img src="assets/img/GlisterBlanco.png" [routerLink]="['/oral-system']" draggable="false" class="logo mb2" alt="">
+            <br>
+            <img src="assets/img/youtube.png" (click)="openLink('https://www.youtube.com/user/AmwayLatinTV')" draggable="false" class="social-icon" alt="">
+            <img src="assets/img/facebook.png" (click)="openLink('https://www.facebook.com/amwaylatinamerica')" draggable="false" class="social-icon" alt="">
+            <img src="assets/img/instagram.png" (click)="openLink('https://www.instagram.com/amway.latam/')" draggable="false" class="social-icon" alt="">
+            <img src="assets/img/spotify.png" (click)="openLink('https://open.spotify.com/show/47xLLbDNX7GNTofXAqYOUa?si=NGQj68IJTK2X7mVAqa6Waw&nd=1')" draggable="false" class="social-icon" alt="">
+        </div>
+        <div class="col-sm-12 col-md-3">
+            <span [routerLink]="['/oral-system-game']" class="g-text mb1" style="color: #fff;">SISTEMA BUCAL</span>
+            <span [routerLink]="['/doctor-glister']" class="g-text mb1" style="color: #fff;">DR. GLISTER</span>
+            <span [routerLink]="['/traceability']" class="g-text mb1" style="color: #fff;">TRAZABILIDAD</span>
+        </div>
+        <div class="col-sm-12 col-md-3">
+<!--             <span [routerLink]="['/learn']" class="g-text mb1" style="color: #fff;">APRENDE</span> -->
+            <span [routerLink]="['/buy', 1]" class="g-text mb1" style="color: #fff;">COMPRAR</span>
+        </div>
+        <div class="col-sm-12 col-md-3 text-center">
+            <img src="assets/img/footer.png" draggable="false" style="width: 60%;" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-0 col-md-1 col-lg-2"></div>
+        <div class="col-sm-12 col-md-10 col-lg-8">
+            <span class="g-text-xsmall text-center" style="color: #fff;">*Estas recomendaciones son generales y no sustituyen una visita con un especialista en cuidado bucal, es importante consultar a un dentista para obtener una evaluación personalizada. **Por la legislación regulatoria el sello Plant-Based Goodness™ en Chile no aplica.</span>
+        </div>
+        <div class="col-sm-0 col-md-1 col-lg-2"></div>
+    </div>
+</footer>

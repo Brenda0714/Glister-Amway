@@ -1,0 +1,13 @@
+
+<app-navbar [isSidebarOpen]="isSidebarOpen" (openSidebar)="openSidebar()"></app-navbar>
+<app-sidebar [isSidebarOpen]="isSidebarOpen" (closeSidebar)="closeSidebar()"></app-sidebar>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
+
+<app-footer></app-footer>
+
+<div class="go-to-top-container">
+    <img src="assets/img/flecha_top.png" class="go-to-top-image" alt="" (click)="gotoTop()" [ngClass]="{'glowing': isAtTop}">
+</div>

@@ -1,0 +1,63 @@
+<div class="custom-container overflow">
+    <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; ">
+       
+        <button (click)="changeStep('prev')" [disabled]="step == 0" class="change-btn g-text g-bold">
+            <img class="arrowNext" [src]="imageUrl" alt="Imagen"> PASO ANTERIOR
+          </button>
+
+
+        <button (click)="changeStep('next')" *ngIf="step != 3"  class="change-btn g-text g-bold" > 
+            PASO SIGUIENTE
+            <img class="arrowNext" style="transform: scaleX(-1);" [src]="imageUrl" alt="Imagen">
+        </button>
+        
+
+        <button (click)="navigateTo(['oral-system-steps'])" *ngIf="step == 3" class="change-btn g-text g-bold">VER LOS PASOS</button>
+    </div>
+    
+    <span class="g-title mb2 text-center">{{ steps[step].title }}</span>
+
+    <span class="g-text mb2 text-center">{{ steps[step].subtitle }}</span>
+
+    <div class="row mb2">
+        <div class="col-sm-12 col-md-12 col-lg-5 mb2 text-center" style="position: relative;">
+            <img [src]="steps[step].img" draggable="false" class="g-img-product" alt="">
+            <img [src]="steps[step].icon" (click)="openModal()" draggable="false" style="cursor: pointer; width: 75px; position: absolute; bottom: 5%; right: 16%;" alt="">
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-7 text-center">
+            <div style="text-align: justify;" class="mb4" [innerHTML]="steps[step].description"></div>
+
+            <button (click)="navigateTo(['buy', steps[step].from])" class="g-btn">
+                <span class="g-text">COMPRAR</span>
+            </button>
+        </div>
+    </div>
+
+    <img src="assets/img/Mentas PNG/Menta-05.png" class="mint" style="top: 10%; left: -3%; transform: rotate(75deg);" draggable="false" alt="">
+    
+</div>
+
+
+
+<div class="custom-container pt2 mb4">
+    <span class="g-text-small text-center">{{ steps[step].footer }}</span>
+</div>
+
+
+<div id="product-detail" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content" style="background-color: transparent !important; border: none;">
+            <div class="modal-header" style="padding: 0; border: none;">
+                <div class="text-end" style="width: 100%;">
+                    <img src="assets/img/BotonTacha.png" (click)="closeModal()" style="width: 50px;" alt="">
+                </div>
+            </div>
+            <div class="modal-body" style="padding: 2rem; padding-bottom: 4rem; background-color: #fff; border-radius: 25px;">
+
+                <span class="g-title mb2" style="color: #a7d18c;">Instrucciones de uso:</span>
+
+                <span class="g-text" [innerHtml]="steps[step].modeOfUse"></span>
+            </div>
+        </div>
+    </div>
+</div>

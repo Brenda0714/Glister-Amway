@@ -1,0 +1,63 @@
+.custom-footer {
+    background-color: #b0d381;
+    color: #fff;
+    padding: 2rem;
+}
+
+.logo {
+    width: 50%;
+}
+
+.social-icon{
+    width: 12%; 
+    margin-right: 10px; 
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.g-text {
+    font-weight: 300;
+    cursor: pointer;
+
+    &:active {
+        color: #f1f1f1;
+        text-decoration: underline;
+    }
+}
+
+.g-text-small {
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.g-text-xsmall {
+    cursor: pointer;
+}
+
+
+
+// Extra small devices (smartphones, 374px and down)
+@media (min-width: 300px) and (max-width: 374px) { 
+    #logo {
+        margin-bottom: 2rem;
+    }
+}
+
+// Small devices (smartphones, 576px and down)
+@media (min-width: 375px) and (max-width: 576px) { 
+    #logo {
+        margin-bottom: 2rem;
+    }
+}
+
+// Medium devices (tablets, 768px and down)
+@media (min-width: 577px) and (max-width: 768px) {
+    #logo {
+        margin-bottom: 2rem;
+    }
+}
+  
+  
+  
+  
+  

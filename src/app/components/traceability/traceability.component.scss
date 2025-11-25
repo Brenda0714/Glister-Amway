@@ -1,0 +1,15 @@
+.card {
+    border-radius: 25px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 10px 0 15px 3px #ddd;
+  
+    .card-content {
+        padding: 1.5rem 1rem;
+        background-color: #fff;
+    }
+}
+
+.g-text-small {
+    color: #222;
+}

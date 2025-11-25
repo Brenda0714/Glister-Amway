@@ -1,0 +1,39 @@
+.green {
+    font-weight: 600;
+    color: #a7d18c !important;
+}
+
+.change-btn {
+    background-color: transparent !important;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.change-btn:hover {
+    text-decoration: underline; /* Subrayado cuando el mouse está en hover */
+  }
+
+.g-img-product {
+    width: 50%;
+}
+
+
+// Medium devices (tablets, 768px and down)
+@media (min-width: 577px) and (max-width: 768px) {
+    .g-img-product {
+        width: 40%;
+    }
+}
+
+.arrowNext {
+    background-size: cover;
+    padding-top: -15px;
+    width: 15px;
+    height: 25px;
+}
+
+product-detai{
+    border-radius: 5px;
+}

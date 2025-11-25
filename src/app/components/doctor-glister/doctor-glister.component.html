@@ -1,0 +1,89 @@
+<div class="custom-center back-img" [style]="'background-image: url('+ (questionIndex == 0 ? backImg1: backImg2) +');'">
+
+
+    <img src="assets/img/RecomendadorDrGlister/DrGlisterBlanco.png" class="g-title-img mt3 mb1" draggable="false" alt="">
+
+    <div class="custom-card mb2">
+        <div *ngIf="questionIndex == 0" class="card-header" style="padding: 0;">
+            <img [src]="questions[questionIndex].img" draggable="false" alt="">
+        </div>
+        <div *ngIf="questionIndex == 0" class="card-body custom-center" style="height: 200px;">
+            <span class="g-text" style="padding: 0 3rem;"><b>{{ questions[questionIndex].question }}</b></span>
+        </div>
+
+
+        <div *ngIf="questionIndex > 0" class="card-header">
+            <span class="g-text-small" style="color: #64a2ff;">{{ questions[questionIndex].position }} PREGUNTA</span>
+            <div class="steps">
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 1}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 2}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 3}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 4}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 5}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 6}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 7}"></span>
+                <span class="step" [ngClass]="{ 'active': questionIndex >= 8}"></span>
+            </div>
+            <span class="g-text-small" style="color: #64a2ff;">PREGUNTA {{ questions[questionIndex].id }} DE 8 </span>
+        </div>
+        <div *ngIf="questionIndex > 0" class="card-body">
+            <span class="g-text-small mb1" style="color: #222; padding: 0 2rem;">
+                {{ questions[questionIndex].question }}
+            </span>
+
+            <img [src]="questions[questionIndex].img" draggable="false" alt="">
+
+            <div class="answers">
+                <button (click)="questions[questionIndex].answer = false; changeStep('plus');" class="answer-btn"
+                    [ngClass]="{'active': questions[questionIndex].answer == false }">
+                    <span class="g-text-small" style="color: #fff;">NO</span>
+                </button>
+                <button (click)="questions[questionIndex].answer = true; changeStep('plus');" class="answer-btn"
+                    [ngClass]="{'active': questions[questionIndex].answer == true }">
+                    <span class="g-text-small" style="color: #fff;">SI</span>
+                </button>
+            </div>
+        </div>
+
+
+        <div [ngClass]="{'card-footer': isClass1, 'card-footerReady': !isClass1}">
+            <div *ngIf="questionIndex > 1; else elseBack">
+                <button (click)="changeStep('minus')" [disabled]="questionIndex == 0" class="step-btn"><b
+                        class="g-text-small" style="color: #222;">Regresar</b></button>
+            </div>
+            <ng-template #elseBack>
+                <div *ngIf="questionIndex == 1">
+                    <button (click)="toggleClass()" (click)="changeStep('minus')" class="step-btn"><b
+                            class="g-text-small" style="color: #222;">Regresar</b></button>
+                </div>
+            </ng-template>
+            <div *ngIf="questions[questionIndex].answer == null; else elseNext">
+                <!--button (click)="changeStep('plus')" [disabled]="questions[questionIndex].answer == null"
+                    class="step-btn"><b class="g-text-small" style="color: #a4a4a4; ">Continuar</b></button-->
+            </div>
+
+            <ng-template #elseNext>
+                <div *ngIf="questionIndex == 0">
+                    <button (click)="toggleClass()" (click)="changeStep('plus')"
+                        [disabled]="questions[questionIndex].answer == null" class="step-btnReady"><b class="g-subtitle"
+                            style="color: #222; ">Iniciar</b></button>
+
+                </div>
+                <div *ngIf="questionIndex > 0">
+                    <!--button (click)="changeStep('plus')" [disabled]="questions[questionIndex].answer == null"
+                        class="step-btn"><b class="g-text-small" style="color: #222; ">Continuar</b></button-->
+
+                </div>
+
+            </ng-template>
+
+        </div>
+    </div>
+
+    <span class="g-text-small mb4 text-center" style="width: 60%; color: #f1f1f1;">
+        *Estas recomendaciones son generales y no sustituyen una visita con un especialista en cuidado bucal, es
+        importante consultar a un dentista para obtener una evaluación personalizada. **Por la legislación regulatoria
+        el sello Plant-Based Goodness™ en Chile no aplica.
+    </span>
+
+</div>
