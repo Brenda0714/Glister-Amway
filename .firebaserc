@@ -1,7 +1,7 @@
 {
   "projects": {
-    "default": "amway3-4c965",
-    "amway glister": "amway3-4c965"
+    "default": "amway-glister",
+    "glister": "amway-glister"
   },
   "targets": {},
   "etags": {}
