@@ -8,11 +8,10 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-learn',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './learn.component.html',
-  styleUrls: ['./learn.component.scss']
+    selector: 'app-learn',
+    imports: [CommonModule],
+    templateUrl: './learn.component.html',
+    styleUrls: ['./learn.component.scss']
 })
 export class LearnComponent {
 

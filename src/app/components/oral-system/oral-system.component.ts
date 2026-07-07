@@ -11,11 +11,10 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-oral-system',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './oral-system.component.html',
-  styleUrls: ['./oral-system.component.scss']
+    selector: 'app-oral-system',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './oral-system.component.html',
+    styleUrls: ['./oral-system.component.scss']
 })
 export class OralSystemComponent {
 

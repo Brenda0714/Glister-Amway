@@ -8,11 +8,10 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-doctor-glister',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './doctor-glister.component.html',
-  styleUrls: ['./doctor-glister.component.scss']
+    selector: 'app-doctor-glister',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './doctor-glister.component.html',
+    styleUrls: ['./doctor-glister.component.scss']
 })
 export class DoctorGlisterComponent {
 

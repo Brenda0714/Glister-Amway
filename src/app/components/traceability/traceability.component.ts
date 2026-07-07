@@ -8,11 +8,10 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-traceability',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './traceability.component.html',
-  styleUrls: ['./traceability.component.scss']
+    selector: 'app-traceability',
+    imports: [CommonModule],
+    templateUrl: './traceability.component.html',
+    styleUrls: ['./traceability.component.scss']
 })
 export class TraceabilityComponent {
 

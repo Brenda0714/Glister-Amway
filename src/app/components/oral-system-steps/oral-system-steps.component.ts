@@ -9,12 +9,11 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-oral-system-steps',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './oral-system-steps.component.html',
-  styleUrls: ['./oral-system-steps.component.scss'],
-  encapsulation: ViewEncapsulation.None,
+    selector: 'app-oral-system-steps',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './oral-system-steps.component.html',
+    styleUrls: ['./oral-system-steps.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class OralSystemStepsComponent {
 

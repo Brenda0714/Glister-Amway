@@ -9,13 +9,11 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-doctor-glister-tips',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './doctor-glister-tips.component.html',
-  styleUrls: ['./doctor-glister-tips.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-
+    selector: 'app-doctor-glister-tips',
+    imports: [CommonModule],
+    templateUrl: './doctor-glister-tips.component.html',
+    styleUrls: ['./doctor-glister-tips.component.scss'],
+    encapsulation: ViewEncapsulation.None
 })
 export class DoctorGlisterTipsComponent implements OnInit {
   public swiper: any = null;

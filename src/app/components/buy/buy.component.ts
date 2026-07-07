@@ -7,11 +7,10 @@ declare var utag: any;
 declare var window: any;
 
 @Component({
-  selector: 'app-buy',
-  standalone: true,
-  imports: [CommonModule, RouterModule],
-  templateUrl: './buy.component.html',
-  styleUrls: ['./buy.component.scss']
+    selector: 'app-buy',
+    imports: [CommonModule, RouterModule],
+    templateUrl: './buy.component.html',
+    styleUrls: ['./buy.component.scss']
 })
 export class BuyComponent {
 
