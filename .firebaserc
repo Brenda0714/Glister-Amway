@@ -1,7 +1,8 @@
 {
   "projects": {
     "default": "amway-glister",
-    "glister": "amway-glister"
+    "glister": "amway-glister",
+    "cambio2": "amway-glister"
   },
   "targets": {},
   "etags": {}
