@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;

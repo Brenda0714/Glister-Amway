@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;
@@ -22,7 +22,7 @@ export class OralSystemAllStepsComponent {
 
   ngOnInit(){
     let utag_data = environment.utagInfo.oralSystemAnimation;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
   }

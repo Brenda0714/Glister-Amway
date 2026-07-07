@@ -5,7 +5,7 @@ import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import { Router, RouterModule } from '@angular/router';
 
 import * as bootstrap from 'bootstrap';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;

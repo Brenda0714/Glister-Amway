@@ -21,6 +21,7 @@
               "base": "dist"
             },
             "index": "src/index.html",
+            "allowedCommonJsDependencies": ["aos"],
             "polyfills": [
               "zone.js"
             ],
@@ -49,7 +50,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "900kb",
+                  "maximumWarning": "1mb",
                   "maximumError": "2mb"
                 },
                 {

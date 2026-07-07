@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit,ViewEncapsulation  } from '@angular/core';
 import { Router } from '@angular/router';
-import { DoctorGlisterService } from 'src/app/services/doctor-glister.service';
-import { environment } from 'src/environments/environment';
+import { DoctorGlisterService } from '../../../app/services/doctor-glister.service';
+import { environment } from '../../../environments/environment';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 
 declare var utag: any;
@@ -1916,7 +1916,7 @@ export class DoctorGlisterTipsComponent implements OnInit {
     img:[
       'assets/img/RecomendadorDrGlister/Cepillo.png',
      'assets/img/RecomendadorDrGlister/Enjuague.png']},
-  
+
 
 
    { id: 138, answers: [true, false, true,true,true,false,true,true,false],
@@ -1998,7 +1998,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     </span>`,
 
     img:[
-      
+
      'assets/img/RecomendadorDrGlister/Enjuague.png']},
 
    { id: 144, answers: [true, false, true,true,true,false,false,false,false],
@@ -2597,7 +2597,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
 
    { id: 187, answers: [true, false, true,false,false,false,true,false,true],
     tip:` <span class="g-text mb2 text-center">
@@ -2613,7 +2613,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
    { id: 188, answers: [true, false, true,false,false,false,true,false,false],
     tip:` <span class="g-text mb2 text-center">
     Recuerda no descuidar las visitas al dentista. Los chequeos y limpiezas profesionales son clave para detectar problemas en etapas tempranas.
@@ -2628,7 +2628,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
 
    { id: 189, answers: [true, false, true,false,false,false,false,true,true],
     tip:` <span class="g-text mb2 text-center">
@@ -2644,7 +2644,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
 
    { id: 190, answers: [true, false, true,false,false,false,false,true,false],
     tip:` <span class="g-text mb2 text-center">
@@ -2660,7 +2660,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
    { id: 191, answers: [true, false, true,false,false,false,false,false,true],
     tip:` <span class="g-text mb2 text-center">
     Programa visitas regulares al dentista para detectar problemas temprano y no olvides que, para una limpieza eficaz, los odontólogos recomiendan cambiar tu cepillo dental cada tres meses.
@@ -2674,7 +2674,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
 
    { id: 192, answers: [true, false, true,false,false,false,false,false,false],
     tip:` <span class="g-text mb2 text-center">
@@ -2689,7 +2689,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
     img:[
       'assets/img/RecomendadorDrGlister/HiloDental.png',
       'assets/img/RecomendadorDrGlister/Enjuague.png']},
-   
+
 
    { id: 193, answers: [true, false, false,true,true,true,true,true,true],
     tip:` <span class="g-text mb2 text-center">
@@ -3532,7 +3532,7 @@ Recuerda que estas recomendaciones son generales y no sustituyen una visita con 
 
 
     let utag_data = environment.utagInfo.drGlisterTips;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
   }

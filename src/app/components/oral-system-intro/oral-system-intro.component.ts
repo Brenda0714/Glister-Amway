@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;
@@ -13,27 +13,27 @@ declare var window: any;
     styleUrls: ['./oral-system-intro.component.scss']
 })
 export class OralSystemIntroComponent {
-  
+
   public hasToothPaste: boolean = false;
 
   public minMax: any = {
     left: 0, right: 0, top: 0, bottom: 0
-  } 
+  }
 
   constructor(private router: Router){}
 
   ngOnInit(){
     let utag_data = environment.utagInfo.oralSystemAnimation;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
   }
-  
+
   ngAfterViewInit(): void {
     /*let dragable = document.getElementById("dragable") as HTMLElement;
     let dragable2 = document.getElementById("dragable2") as HTMLElement;
     let dragzone = document.getElementById("dragzone") as HTMLElement;
-    
+
     this.minMax.right = dragzone.clientWidth;
     this.minMax.bottom = dragzone.clientHeight;
 
@@ -87,8 +87,8 @@ export class OralSystemIntroComponent {
       let positionX = element.offsetLeft - pos1;
       let height = element.clientHeight;
       let width = element.clientWidth;
-      let newBottom = this.minMax.bottom - height;  
-      let newRight = this.minMax.right - width;  
+      let newBottom = this.minMax.bottom - height;
+      let newRight = this.minMax.right - width;
 
       if((positionY > this.minMax.top && positionY < newBottom)){
         element.style.top = `${element.offsetTop - pos2}px`;

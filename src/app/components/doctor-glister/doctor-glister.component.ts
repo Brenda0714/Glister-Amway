@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { DoctorGlisterService } from 'src/app/services/doctor-glister.service';
-import { environment } from 'src/environments/environment';
+import { DoctorGlisterService } from '../../../app/services/doctor-glister.service';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;
@@ -62,7 +62,7 @@ export class DoctorGlisterComponent {
     this.doctorGlisterService.setQuestions(this.questions);
 
     let utag_data = environment.utagInfo.drGlister;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
   }

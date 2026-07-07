@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 import * as bootstrap from 'bootstrap';
 
@@ -46,7 +46,7 @@ export class LearnComponent {
         },
         {
           img: 'assets/img/Aprende/Guia de productos/Glister-Hilo-Dental---Hoja-de-producto/Glister Hilo Dental - Hoja de producto_page-0001.jpg', name: 'GLISTER HILO DENTAL - HOJA DE PRODUCTO', size: '1,560 KB', link: 'assets/img/Aprende/Guia de productos/Glister-Hilo-Dental---Hoja-de-producto/Glister Hilo Dental - Hoja de producto.pdf'
-          
+
         },
         {
           img: 'assets/img/Aprende/Guia de productos/Glister-Enjuague-Bucal---Hoja-de-producto/Glister Enjuague Bucal - Hoja de producto_page-0001.jpg', name: 'GLISTER ENJUAGUE BUCAL - HOJA DE PRODUCTO', size: '1,284 KB', link: 'assets/img/Aprende/Guia de productos/Glister-Enjuague-Bucal---Hoja-de-producto/Glister Enjuague Bucal - Hoja de producto.pdf'
@@ -57,7 +57,7 @@ export class LearnComponent {
       ]
     },
     {
-      id: 3, title: 'Video sistema 3 pasos', icon: 'assets/img/Aprende/Play.png', 
+      id: 3, title: 'Video sistema 3 pasos', icon: 'assets/img/Aprende/Play.png',
       resources: [
         {
           img: 'assets/img/Aprende/SistemaTresPasos/Sistema3pasos.jpg', name: 'AMWAY GILSTER - SISTEMA 3 PASOS', size: '168,108 KB', link: 'assets/img/Aprende/SistemaTresPasos/Sistema3pasos.mp4'
@@ -73,7 +73,7 @@ export class LearnComponent {
       ]
     },
     {
-      id: 5, title: 'Videos Dr. Glister', icon: 'assets/img/Aprende/Play.png', 
+      id: 5, title: 'Videos Dr. Glister', icon: 'assets/img/Aprende/Play.png',
       resources: [
         {
           img: 'assets/img/Aprende/DrGlister/DrGlisterTodoestaconectado.jpg', name: 'DR GLISTER - TODO ESTÁ CONECTADO', size: '99,041 KB', link: 'assets/img/Aprende/DrGlister/DrGlisterTodoestaconectado.mp4'
@@ -90,7 +90,7 @@ export class LearnComponent {
 
   ngOnInit(){
     let utag_data = environment.utagInfo.learn;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
   }

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import * as bootstrap from 'bootstrap';
-import { environment } from 'src/environments/environment';
+import { environment } from '../../../environments/environment';
 
 declare var utag: any;
 declare var window: any;
@@ -33,10 +33,10 @@ export class TraceabilityComponent {
 
   ngOnInnit(){
     let utag_data = environment.utagInfo.traceability;
-        
+
     window.utag_data = Object.assign(window.utag_data, utag_data);
     utag.view(window.utag_data);
-  
+
   }
 
   ngAfterViewInit() {
@@ -54,7 +54,7 @@ export class TraceabilityComponent {
 
   closeModal() {
     this.videoSelected = '';
-    
+
     this.modal.hide();
   }
 }
