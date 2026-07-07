@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "glisterAmway:build:production"
+              "buildTarget": "glisterAmway:build:production"
             },
             "development": {
-              "browserTarget": "glisterAmway:build:development"
+              "buildTarget": "glisterAmway:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "glisterAmway:build"
+            "buildTarget": "glisterAmway:build"
           }
         },
         "test": {
